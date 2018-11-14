@@ -20,6 +20,7 @@ def detection_visage_yeux(filename):
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 
+
 def detection_visage_webcam():
     face_cascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
     eye_cascade = cv2.CascadeClassifier("haarcascade_eye.xml")
