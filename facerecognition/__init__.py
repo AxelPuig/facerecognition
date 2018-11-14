@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 
-def fonction_detection_visage_yeux(filename):
+def detection_visage_yeux(filename):
     face_cascade = cv2.CascadeClassifier(
         "C:\\Users\\gregm\\PycharmProjects\\facerecognition\\Data\\haarcascade_frontalface_default.xml")
     eye_cascade = cv2.CascadeClassifier("C:\\Users\\gregm\\PycharmProjects\\facerecognition\\Data\\haarcascade_eye.xml")
