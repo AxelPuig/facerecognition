@@ -3,6 +3,8 @@ import numpy as np
 
 
 def detection_visage_yeux(filename):
+    face_cascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
+    eye_cascade = cv2.CascadeClassifier("haarcascade_eye.xml")
     img = cv2.imread(filename)
     hauteur, longueur, _ = img.shape
     ratio = longueur / hauteur
