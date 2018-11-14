@@ -46,6 +46,3 @@ def detection_visage_webcam():
         key = cv2.waitKey(1)
     cv2.destroyAllWindows()
     cap.release()
-
-def reconnaissance_faciale(filename):
-
