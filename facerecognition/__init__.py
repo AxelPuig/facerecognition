@@ -3,9 +3,8 @@ import numpy as np
 
 
 def detection_visage_yeux(filename):
-    face_cascade = cv2.CascadeClassifier(
-        "C:\\Users\\gregm\\PycharmProjects\\facerecognition\\Data\\haarcascade_frontalface_default.xml")
-    eye_cascade = cv2.CascadeClassifier("C:\\Users\\gregm\\PycharmProjects\\facerecognition\\Data\\haarcascade_eye.xml")
+    face_cascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
+    eye_cascade = cv2.CascadeClassifier("haarcascade_eye.xml")
     img = cv2.imread(filename)
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     faces = face_cascade.detectMultiScale(gray, 1.3, 5)
