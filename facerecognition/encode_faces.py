@@ -9,7 +9,7 @@ import os
 ap = argparse.ArgumentParser()
 ap.add_argument("-i", "--dataset", required=True,
                 help="path to input directory of faces + images")
-ap.add_argument("--e", "--encodings", required=True,
+ap.add_argument("-e", "--encodings", required=True,
                 help="path to serialized db of facial encodings")
 ap.add_argument("-d", "--detection-method", type=str, default="cnn",
                 help="face detection model to use: either 'hog' or 'cnn'")
@@ -47,6 +47,6 @@ for (i, imagePath) in enumerate(imagePaths):
 # dump the facial encodings + names to disk
 print("[INFO] serializing encodings...")
 data = {"encodings": knownEncodings, "names": knownNames}
-f = open(args["e"], "wb")
+f = open(args["encodings"], "wb")
 f.write(pickle.dumps(data))
 f.close()
