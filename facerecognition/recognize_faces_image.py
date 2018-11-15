@@ -1,3 +1,4 @@
+# coding=utf-8
 # import the necessary packages
 import face_recognition
 import argparse
@@ -21,9 +22,9 @@ data = pickle.loads(open(args["encodings"], "rb").read())
 # load the input image and convert it from BGR to RGB
 image = cv2.imread(args["image"])
 cap = cv2.VideoCapture(0)
-_, img = cap.read()
+_, image = cap.read()
 cap.release()
-rgb = img
+rgb = image
 
 # detect the (x, y)-coordinates of the bounding boxes corresponding
 # to each face in the input image, then compute the facial embeddings
@@ -65,7 +66,7 @@ for encoding in encodings:
 
     # update the list of names
     names.append(name)
-#TODO: résoudre le bug d'après
+# TODO: résoudre le bug d'après
 print(boxes, names)
 # loop over the recognized faces
 for ((top, right, bottom, left), name) in zip(boxes, names):
