@@ -26,7 +26,7 @@ while k == -1:
 
     hauteur, longueur, _ = image.shape
     ratio = longueur / hauteur
-    image = cv2.resize(image, (int(100 * ratio), 100))
+    # image = cv2.resize(image, (int(100 * ratio), 100))
 
     # detect the (x, y)-coordinates of the bounding boxes corresponding
     # to each face in the input image, then compute the facial embeddings
